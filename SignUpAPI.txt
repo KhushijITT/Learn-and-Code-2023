@@ -1,0 +1,33 @@
+class SignupController : ControllerBase
+function - Signup(UserDto userDto)
+
+class - SignupAPI
+function - Signup(string username,string email)
+
+
+interface - IUserService
+function - CreateUser(User user);
+
+class UserService : IUserService
+function - CreateUser(User user)
+    
+
+interface - IDirectoryService
+function - CreateUserDirectory(string username, string directoryPath);
+
+class DirectoryService : IDirectoryService
+function - CreateUserDirectory(string username, string directoryPath)
+    
+	
+interface - INotificationService
+function - NotifyUser(int userId, string message);
+
+class - NotificationService : INotificationService
+function - NotifyUser(int userId, string message)
+
+
+interface - IValidatorService
+function - ValidateInput(UserDto userDto)
+
+class - ValidatorService : IValidatorService
+function - ValidateInput(UserDto userDto)
